@@ -7,10 +7,10 @@ class Titulaire{ // classe titulaire
     private string $_ville;
     private array $_comptes=[];
 
-    function __construct(string $nom, string $prenom, DateTime $naissance, string $ville){ // constructeur
+    function __construct(string $nom, string $prenom, string $naissance, string $ville){ // constructeur
         $this->_nom=$nom;
         $this->_prenom=$prenom;
-        $this->_naissance=$naissance;
+        $this->_naissance = new DateTime($naissance);
         $this->_ville=$ville;
     }
     //getters et setters
@@ -29,8 +29,8 @@ class Titulaire{ // classe titulaire
     public function getNaissance(){
         return $this->_naissance;
     }
-    public function setNaissance(DateTime $naissance){
-        $this->_naissance=$naissance;
+    public function setNaissance(string $naissance){
+        $this->_naissance = new DateTime($naissance);
     }
     public function getVille(){
         return $this->_ville;
