@@ -66,7 +66,7 @@ class Compte{ // class compte
     public function __toString(){ //formate l'affichage du compte 
         return "Libellé : ".$this->_libelle."<br>".
         "Solde : ".$this->_solde." ".$this->_devise."<br>".
-        "Titulaire : "."$this->_titulaire"; 
+        "Titulaire -: "."$this->_titulaire"; 
     }
 }
 
